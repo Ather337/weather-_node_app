@@ -1,6 +1,6 @@
 const msg = document.querySelector("#msg");
 const weather = (loc) => {
-  fetch("http://localhost:3000/weather?search=" + loc).then((res) => {
+  fetch("/weather?search=" + loc).then((res) => {
     res.json().then((data) => {
       if (data.error) {
         msg.textContent = data.error;
